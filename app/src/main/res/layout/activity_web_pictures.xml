@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_pictures_top"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/tv_pictures_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="请在搜索框中输入网站网址" />
+
+        <ImageView
+            android:id="@+id/iv_pictures_download"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="dowmOrDelImage"
+            android:src="@drawable/icon_s_download_press"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/cb_pictures_select"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="45dp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_pictures_top"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+    <com.xhly.capture.widget.LoadingView
+        android:id="@+id/loadView"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:background="#9000"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>
+
